@@ -1,0 +1,34 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <model name="pipe_world">
+    <static>true</static>
+    <link name="link">
+      <visual name="visual">
+        <geometry>
+          <mesh>
+            <uri>model://pipe_world/meshes/hexpipewithmaterial2.dae</uri>
+          </mesh>
+        </geometry>
+      </visual>
+      <collision name="collision">
+        <geometry>
+          <cylinder>
+            <radius>1.002</radius>
+            <length>14.431791</length>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+    </link>
+  </model>
+</sdf>
+
+
+

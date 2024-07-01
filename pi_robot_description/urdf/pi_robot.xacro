@@ -1,0 +1,194 @@
+<?xml version="1.0" ?>
+<robot name="pi_robot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find pi_robot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find pi_robot_description)/urdf/pi_robot.trans" />
+<xacro:include filename="$(find pi_robot_description)/urdf/pi_robot.gazebo" />
+<link name="base_link">
+  <inertial>
+    <origin xyz="-0.003484816038942767 2.669844108166878e-17 0.10625767751059337" rpy="0 0 0"/>
+    <mass value="29.432558250427014"/>
+    <inertia ixx="0.127783" iyy="0.656623" izz="0.712915" ixy="-0.0" iyz="0.0" ixz="0.0073"/>
+  </inertial>
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_left_wheel_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 0.020000000000000004 0.0" rpy="0 0 0"/>
+    <mass value="1.1597646981621281"/>
+    <inertia ixx="0.003031" iyy="0.005757" izz="0.003031" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15 -0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15 -0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/front_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="front_right_wheel_1">
+  <inertial>
+    <origin xyz="0.0 -0.020000000000000004 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="1.1597646981621288"/>
+    <inertia ixx="0.003031" iyy="0.005757" izz="0.003031" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.15 0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.15 0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/front_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_left_wheel_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 0.020000000000000004 1.3877787807814457e-17" rpy="0 0 0"/>
+    <mass value="1.1597646981621286"/>
+    <inertia ixx="0.003031" iyy="0.005757" izz="0.003031" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.15 -0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/rear_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.15 -0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/rear_left_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="rear_right_wheel_1">
+  <inertial>
+    <origin xyz="2.7755575615628914e-17 -0.020000000000000004 0.0" rpy="0 0 0"/>
+    <mass value="1.1597646981621286"/>
+    <inertia ixx="0.003031" iyy="0.005757" izz="0.003031" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.15 0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/rear_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.15 0.105 -0.1" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/rear_right_wheel_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="camera_link_1">
+  <inertial>
+    <origin xyz="0.0050000000000000044 3.2310396764073848e-18 2.7755575615628914e-17" rpy="0 0 0"/>
+    <mass value="0.00783434667988954"/>
+    <inertia ixx="2e-06" iyy="1e-06" izz="1e-06" ixy="0.0" iyz="0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="-0.195 -0.0 -0.173" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="-0.195 -0.0 -0.173" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/camera_link_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="lidar_1">
+  <inertial>
+    <origin xyz="-2.7755575615628914e-17 -1.0052123437711855e-17 0.020000000000000018" rpy="0 0 0"/>
+    <mass value="3.551256335617902"/>
+    <inertia ixx="0.00367" iyy="0.00367" izz="0.006392" ixy="-0.0" iyz="0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.15 -0.0 -0.202" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.15 -0.0 -0.202" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="package://pi_robot_description/meshes/lidar_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="Revolute 5" type="continuous">
+  <origin xyz="0.15 0.105 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 6" type="continuous">
+  <origin xyz="0.15 -0.105 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="front_right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 7" type="continuous">
+  <origin xyz="-0.15 0.105 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_left_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Revolute 8" type="continuous">
+  <origin xyz="-0.15 -0.105 0.1" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="rear_right_wheel_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Rigid 9" type="fixed">
+  <origin xyz="0.195 0.0 0.173" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="camera_link_1"/>
+</joint>
+
+<joint name="Rigid 10" type="fixed">
+  <origin xyz="-0.15 0.0 0.202" rpy="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="lidar_1"/>
+</joint>
+
+</robot>
